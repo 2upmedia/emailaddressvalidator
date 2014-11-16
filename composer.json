@@ -1,6 +1,6 @@
 {
     "name": "2upmedia/emailaddressvalidator",
-    "description": "Michael Rushton's EmailAddressValidator class ported to composer",
+    "description": "Michael Rushton's RFC 5321 and RFC 5321-compliant EmailAddressValidator class ported to composer",
     "license": "proprietary",
     "authors": [
         {
