@@ -1,8 +1,6 @@
 {
     "name": "2upmedia/emailaddressvalidator",
     "description": "Michael Rushton's EmailAddressValidator class ported to composer",
-    "require": {
-    },
     "license": "proprietary",
     "authors": [
         {
@@ -18,6 +16,9 @@
             "homepage": "http://www.2upmedia.com"
         }
     ],
+    "require": {
+        "php": ">=5.3"
+    },
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {

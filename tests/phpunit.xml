@@ -21,4 +21,10 @@
             <directory>./unit</directory>
         </testsuite>
     </testsuites>
+
+    <groups>
+        <exclude>
+            <group>ignore</group>
+        </exclude>
+    </groups>
 </phpunit>
