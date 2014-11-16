@@ -9,18 +9,23 @@ class EmailAddressValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testAddUser($email)
     {
-        $validator = new EmailAddressValidator($email, EmailAddressValidator::RFC_5322);
-
-        $this->assertTrue($validator->isValid());
+        $this->assertTrue($this->isValidEmail($email));
     }
 
     public function testXssInjectedEmail()
     {
         $email = '<script>window.alert("hello");</script>hello@gmail.com';
 
-        $this->assertFalse(
-            (new EmailAddressValidator($email, EmailAddressValidator::RFC_5322))->isValid()
-        );
+        $this->assertFalse($this->isValidEmail($email));
+    }
+
+    public function testAccentedCharacters()
+    {
+        $this->markTestSkipped(__METHOD__);
+
+        $email = 'üñîçøðé@example.com';
+
+        $this->assertTrue($this->isValidEmail($email));
     }
 
     public function getEmailAddresses()
@@ -40,8 +45,16 @@ class EmailAddressValidatorTest extends \PHPUnit_Framework_TestCase
             array("!#$%&'*+-/=?^_`{}|~@example.org"),
             array('"()<>[]:,;@\\"!#$%&\'*+-/=?^_`{}| ~.a"@example.org'),
             array('" "@example.org'),
-//            array('üñîçøðé@example.com'),
         );
+    }
+
+    /**
+     * @param $email
+     * @return bool
+     */
+    protected function isValidEmail($email)
+    {
+        return (new EmailAddressValidator($email, EmailAddressValidator::RFC_5322))->isValid();
     }
 }
  
