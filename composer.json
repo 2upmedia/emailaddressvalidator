@@ -1,0 +1,27 @@
+{
+    "name": "2upmedia/emailaddressvalidator",
+    "description": "Michael Rushton's EmailAddressValidator class ported to composer",
+    "require": {
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Michael Rushton",
+            "email": "michael@squiloople.com",
+            "role": "Original Developer",
+            "homepage": "http://squiloople.com/"
+        },
+        {
+            "name": "Jorge Colon",
+            "email": "jorge@2upmedia.com",
+            "role": "Composer Porter",
+            "homepage": "http://www.2upmedia.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "_2UpMedia\\": ["src/", "tests/"]
+        }
+    }
+}
