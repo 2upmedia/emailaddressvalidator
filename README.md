@@ -9,7 +9,7 @@
 
 # Email Address Validator
 
-RFC 5321 and RFC 5321-compliant email validation.
+RFC 5321 and RFC 5321-compliant email validation. 
 
 Visit for background information and documentation http://squiloople.com/2009/12/20/email-address-validation/
 
